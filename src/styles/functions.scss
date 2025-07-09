@@ -1,0 +1,7 @@
+/// Aplica una transparencia personalizada a un color dado
+/// @param {Color} $color - El color base (hex, rgb, etc.)
+/// @param {Number} $alpha - El nivel de opacidad deseado (0 a 1)
+/// @return {Color} - Color con alfa aplicado
+@function transparentize-color($color, $alpha) {
+    @return rgba($color, $alpha);
+}

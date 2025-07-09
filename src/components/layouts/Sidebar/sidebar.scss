@@ -1,0 +1,180 @@
+.divider {
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    border-bottom: 1px solid var(--color-border-light);
+
+    span {
+        font-size: 0.7rem;
+        color: var(--color-text-secondary);
+    }
+}
+
+.sidebar {
+    background-color: rgba(5, 5, 5, 1);
+    box-shadow: var(--tt-shadow-elevated-md);
+    border-right: 1px solid var(--color-border-light);
+}
+
+.content-sidebar {
+    width: 100%;
+    min-width: max-content;
+    height: auto;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 5px 30px 10px;
+    gap: 10px;
+
+
+    .header-sidebar-logo {
+        width: 100%;
+        height: auto;
+        margin: 10px;
+        border-radius: 3px;
+        box-shadow: var(--tt-brand-color-700);
+        padding: 5px 10px;
+        user-select: none;
+
+        display: grid;
+        grid-template-columns: 40px auto 20px;
+        grid-template-rows: auto auto;
+        gap: 8px;
+        align-items: center;
+        background-color: var(--transparent);
+        cursor: pointer;
+
+        .content-about-sidebar {
+            grid-column: 1 / -1;
+            grid-row: 2;
+            overflow: hidden;
+            height: 0;
+            transition: height 220ms linear, opacity 220ms linear;
+            opacity: 0;
+        }
+
+        .content-about-sidebar ul li a {
+            color: var(--tt-gray-dark-800);
+            padding: 5px 0;
+            display: grid;
+            grid-template-columns: 40px auto;
+            gap: 8px;
+            border-radius: 2px;
+
+            &:hover {
+                background-color: rgba(5, 5, 5, .1);
+            }
+
+            & span:nth-child(1) {
+                width: 30px;
+                height: 30px;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid var(--tt-gray-dark-800);
+                border-radius: 5px;
+            }
+
+        }
+
+        // Al activar, se le da una altura estimada y opacidad
+        &.active .content-about-sidebar {
+            opacity: 1;
+        }
+
+
+
+        h5 {
+            font-size: 0.9rem;
+            flex: 1;
+        }
+
+        .logo {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: centere;
+            align-items: center;
+
+            img {
+                width: 100%;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                margin: auto;
+            }
+        }
+
+        .row {
+            transition: all 200ms linear;
+            display: flex;
+            align-items: center;
+            width: 20px;
+
+            svg {
+                transition: all 200ms linear;
+                transform: rotate(90deg);
+            }
+        }
+
+        &.active .row svg {
+            transform: rotate(0deg);
+        }
+    }
+}
+
+.content-about-sidebar ul {
+    width: 100%;
+}
+
+// navegation the sidebar
+.content_nav_sidebar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 20px;
+
+        li {
+            width: 100%;
+            height: 1.1rem;
+            margin-left: 10px;
+            margin-bottom: 3px;
+            font-size: 0.87rem;
+            display: block;
+
+            a {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                flex-wrap: nowrap;
+                padding: 7px 3px 7px 0;
+                color: var(--color-text-primary);
+                gap: 10px;
+                user-select: none;
+
+                &.disabled{
+                    color: var(--color-text-secondary);
+                    cursor: not-allowed;
+                }
+
+                &.active {
+                    color: var(--tt-color-green-600);
+                }
+            }
+        }
+    }
+}

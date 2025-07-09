@@ -1,0 +1,92 @@
+.user-profile-container {
+    width: 100%;
+    padding: 10px 0;
+
+    .dashboard-layout {
+        display: grid;
+        grid-template-columns: 200px 1fr auto;
+        gap: 20px;
+        align-items: start; // Ajusta alto solo al contenido
+      
+        @media (max-width: 768px) {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto auto;
+      
+          .dashboard-column {
+            width: 100%;
+          }
+        }
+      }
+      
+      .dashboard-column {
+        background-color: var(--color-surface-200);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: var(--shadow-elevation);
+        height: auto; // Se adapta al contenido
+      }
+      
+      // Si quieres ajustar tamaños individualmente:
+      .avatar {
+        width: 100%;
+      }
+      .info {
+        width: 100%;
+      }
+      .metrics {
+        width: 100%;
+      }
+}
+
+.user-profile-container .profile {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+}
+
+.user-profile-container .profile .item {
+    background-color: var(--color-surface-500);
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    flex: 1;
+    flex-wrap: nowrap;
+    gap: 10px;
+    user-select: none;
+
+    .item_icon {
+        min-width: 50px !important;
+        min-height: 50px !important;
+        width: 50px !important;
+        height: 50px !important;
+        max-width: 50px !important;
+        max-height: 50px !important;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--tt-color-text-gray-contrast);
+        border-radius: 50%;
+    }
+
+    .detail_item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        p {
+            span {
+                font-size: 20px;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        h5 {
+            font-size: small;
+            font-weight: 300;
+            color: var(--color-text-primary);
+        }
+    }
+}

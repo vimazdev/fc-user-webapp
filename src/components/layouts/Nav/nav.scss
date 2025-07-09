@@ -1,0 +1,99 @@
+$size-logo-user: 30px;
+
+.nav {
+    $height-nav: 60px;
+    height: $height-nav; // o el alto de tu navbar
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 20px;
+    // background-color: var(--black);
+    border-bottom: 1px solid var(--tt-card-border-color);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slide-in-down 0.3s linear;
+}
+
+.nav .avatar {
+    width: max-content;
+    display: grid;
+    grid-template-columns: auto $size-logo-user auto;
+    align-items: center;
+    gap: 10px;
+    margin: 0 15px;
+}
+
+.nav .avatar .card-detail-user {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: centers;
+
+    h5 {
+        font-size: 0.7rem;
+    }
+
+    p {
+        font-size: 0.6rem;
+        margin: 0;
+        padding: 0;
+        color: var(--tt-color-green-dec-2);
+        font-weight: 500;
+    }
+}
+
+.nav .avatar .card-logo-name {
+    position: relative;
+    width: $size-logo-user;
+    height: $size-logo-user;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--tt-color-green-600);
+    align-items: center;
+
+
+    .ensign {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        position: absolute;
+        background-color: var(--tt-color-red-400);
+        top: 2px;
+        right: 2px;
+
+        img {
+            position: relative;
+            width: 10px;
+            display: none;
+        }
+    }
+
+}
+
+.nav .avatar .card-icons .activity_notify {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+
+.item-icon{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    background-color: var(--color-bg-surface);
+    transition: all 200ms linear;
+    cursor: pointer;
+
+    &:hover{
+        background-color: var(--color-bg-hover);
+    }
+}
+}

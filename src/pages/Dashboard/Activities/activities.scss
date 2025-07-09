@@ -1,0 +1,73 @@
+.activities_component {
+    position: relative;
+    width: 100%;
+    flex: 1;
+    height: 100%;
+    animation: fade-in 0.3s ease-out forwards;
+    background-color: var(--tt-color-text-blue-contrast);
+    padding: 10px;
+  
+    .activity_filters {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+  
+      button {
+        padding: 0.4rem 0.8rem;
+        background: var(--color-surface-500);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+  
+        &.active {
+          background: var(--tt-color-highlight-green-contrast);
+          color: #fff;
+        }
+      }
+    }
+  
+    .activity_list {
+      list-style: none;
+      padding: 0;
+      
+      // 🔽 Aquí está el scroll y altura máxima
+      max-height: 300px; // o usa `60vh`, como prefieras
+      overflow-y: auto;
+      scrollbar-width: thin;
+  
+      li {
+        padding: 0.4rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        background-color: var(--tt-color-text-gray-contrast);
+
+        .box_icon{
+            min-width: 35px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 2px;
+            box-shadow: var(--shadow-md);
+            background-color: var(--color-surface-300);
+        }
+
+        p{
+            font-size: 0.8rem;
+        }
+      }
+    }
+  }
+
+  
+  .activity_list::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .activity_list::-webkit-scrollbar-thumb {
+    background-color: var(--color-border);
+    border-radius: 4px;
+  }
+  

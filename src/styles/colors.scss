@@ -1,0 +1,69 @@
+:root {
+    // 🎨 Texto
+    --color-text-primary: var(--tt-gray-dark-800); // Texto principal
+    --color-text-secondary: var(--tt-gray-dark-600); // Texto secundario
+    --color-text-muted: var(--tt-gray-dark-500); // Texto apagado / descripción
+    --color-text-disabled: var(--tt-gray-dark-400); // Texto deshabilitado
+    --color-text-inverted: var(--white); // Texto blanco sobre fondos oscuros
+
+    // 🧱 Fondo
+    --color-bg-body: var(--tt-bg-color); // Fondo general (negro)
+    --color-bg-surface: var(--tt-card-bg-color); // Fondos tipo tarjeta
+    --color-bg-muted: var(--tt-gray-dark-100); // Fondos intermedios / inputs
+    --color-bg-inverted: var(--white); // Usar en elementos invertidos
+    --color-bg-hover: var(--tt-gray-dark-200); // Fondo al hacer hover
+    --color-bg-active: var(--tt-gray-dark-300); // Fondo al estar activo
+    --color-bg-overlay: rgba(0, 0, 0, 0.5); // Overlays, backdrop blur
+    --color-bg-modal: var(--tt-gray-dark-100); // Fondo de modales
+
+    // 🔲 Bordes
+    --color-border: var(--tt-border-color); // Borde estándar
+    --color-border-light: var(--tt-border-color-tint); // Borde más suave
+    --color-border-muted: var(--tt-gray-dark-a-200); // Usado en inputs y campos
+    --color-border-focus: var(--tt-brand-color-500); // Al hacer focus
+
+    // ✨ Sombras
+    --shadow-sm: var(--tt-shadow-elevated-sm);
+    --shadow-md: var(--tt-shadow-elevated-md);
+    --shadow-lg: var(--tt-shadow-elevated-lg);
+    --shadow-focus-ring: 0 0 0 2px var(--tt-brand-color-a-300); // Para accesibilidad
+
+    // ✅ Estados (feedback visual)
+    --color-success: var(--tt-color-green-base);
+    --color-warning: var(--tt-color-yellow-base);
+    --color-error: var(--tt-color-red-base);
+    --color-info: var(--tt-color-blue-base);
+
+    // 🧠 Inputs
+    --color-input-bg: var(--tt-gray-dark-100);
+    --color-input-text: var(--tt-gray-dark-800);
+    --color-input-border: var(--tt-gray-dark-a-300);
+    --color-input-placeholder: var(--tt-gray-dark-500);
+    --color-input-focus-border: var(--tt-gray-purple-500);
+
+    // 🖱 Scrollbars
+    --color-scrollbar: var(--tt-scrollbar-color);
+    --color-scrollbar-hover: var(--tt-gray-dark-400);
+
+    // 🔘 Botones
+    --color-btn-primary-bg: var(--tt-gray-purple-700);
+    --color-btn-primary-text: var(--white);
+    --color-btn-primary-hover-bg: var(--tt-gray-purple-a-300);
+    --color-btn-primary-active-bg: var(--tt-gray-purple-a-200);
+
+    --color-btn-secondary-bg: var(--tt-gray-dark-300);
+    --color-btn-secondary-text: var(--tt-gray-dark-800);
+    --color-btn-secondary-hover-bg: var(--tt-gray-dark-200);
+
+    --color-btn-danger-bg: var(--tt-color-red-base);
+    --color-btn-danger-text: var(--white);
+    --color-btn-danger-hover-bg: var(--tt-color-red-500);
+
+    // 🧩 Componentes
+    --color-card-bg: var(--tt-card-bg-color);
+    --color-component-bg: var(--tt-gray-dark-100);
+    --color-component-hover-bg: var(--tt-gray-dark-200);
+    --color-component-border: var(--tt-gray-dark-a-300);
+    --color-modal-bg: var(--tt-gray-dark-100);
+
+}
