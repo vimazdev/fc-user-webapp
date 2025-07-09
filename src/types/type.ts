@@ -70,7 +70,8 @@ export interface Commission {
     to_user_id: string;
 }
 
-export interface Activities {
+export interface Activities
+ {
     id: string;
     user_id: string;
     related_user_id: string;
@@ -95,6 +96,7 @@ export interface UserStore {
     user: User;
     plan: PlanItem[];
     commissions: Commission[];
+    activities?: Activities[];
     payment_requests: Payment_requests[];
 }
 

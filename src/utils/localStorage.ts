@@ -1,5 +1,7 @@
 // utils/storage.ts
-export const setLocalData = (key: string, value: never) => {
+import type { UserStore } from '../types/type';
+
+export const setLocalData = (key: string, value: UserStore) => {
     if (typeof window === 'undefined') return;
     try {
         sessionStorage.setItem(key, JSON.stringify(value));
